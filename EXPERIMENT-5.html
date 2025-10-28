@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <title>Student Registration Form</title>
+        <style>
+            label{
+                font-weight: bold;
+            }
+</style>
+    </head>
+    <body>
+        <h2 align="center">Student Registration Form</h2><hr>
+        
+            <label for ="name">Full Name:<input type="text" id="name" name="name" placeholder="Enter your full name" required><br></label><br>
+            
+            <label for="email">Email:<input type="email" id="email" name="email" placeholder="Enter valid email address"><br></label><br>
+
+            <label for ="password">Password:<input type="password" id="password" name="password" placeholder="Enter password" required><br></label><br>
+
+            <label for ="gender">Gender:
+                <input type="radio" id="male" name="gender" value="male" required>Male
+                <input type="radio" id="female" name="gender" value="female" required>Female
+                <input type="radio" id="other" name="gender" value="other" required>Other
+            </label><br><br>
+
+            <label for="course">Course:<select id="course" name="course">
+            <option value="" disable selection>--Select course--</option>
+            <option value="b-tech">B-tech</option>
+            <option value="b-arch">B-arch</option>
+            <option value="b-com">B-com</option>
+            <option value="m-tech">M-tech</option>
+            </select></label><br><br>
+
+            <label for="contact">Contact No:<input type="number" id="contact" placeholder="Enter phone number"></label><br><br>
+
+            <label for="address">Address:<br><textarea id="address" name="address" required rows="4" cols="50" placeholder="Enter your address"></textarea><br></label><br>
+
+            <input type="submit" value="Register">
+            <input type="reset" value="Clear"><hr>
+            <h6 align="center">@ 2025 Student Registration Portal</h6>
+        </form></body>
+</html>
