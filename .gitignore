@@ -1,0 +1,8 @@
+# Ignore all other experiments
+EXP-1/
+EXP-2/
+EXP-4/
+EXP-5/
+EXPERIMENT-ST-1-DONE/
+sid.exp-9/
+.vscode/
