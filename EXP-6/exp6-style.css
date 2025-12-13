@@ -1,6 +1,6 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #ccc;
+    background-color: #42d8fe;
     margin: 20px;   
 }
 
@@ -11,12 +11,12 @@ h1 {
 }
 
 .product-box{
-    background-color: rgb(20, 206, 200);
+    background-color: rgb(231, 255, 112);
     width: 300px;
     margin: 0 auto;
     text-align: center;
     padding: 15px;
-    border: 2px solid gray;
+    border: 2px solid rgb(187, 253, 33);
     border-radius: 12px;
     box-shadow: 0 2px 5px rgba(0,0,0,0);
 }
@@ -36,7 +36,7 @@ h1 {
 
 .description {
     font-size: 14px;
-    color: #555;
+    color: #fe2323;
     margin: 10px 0;
 }
 
