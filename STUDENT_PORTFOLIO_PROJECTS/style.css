@@ -9,6 +9,7 @@
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
+    background-color: #78fab9;
 }
 
 /* ========== NAVBAR STYLING ========== */
@@ -50,7 +51,7 @@ header {
     align-items: center;
     justify-content: center;
     text-align: center;
-    color: white;
+    color: rgb(9, 1, 0);
 }
 
 .hero-text h2 {
@@ -59,21 +60,21 @@ header {
 .hero-section h3 {
     font-size: 28px;
     margin: 10px 0;
-    color: lightgreen;
+    color: rgb(16, 41, 233);
 }
 .hero-section p{
     font-size: 24px;
     margin: 15px 0;
-    color: cyan;
+    color: rgb(234, 8, 8);
 }
 
 
 .name {
-    color: #ffdd57;
+    color: #ff576d;
 }
 
 .btn {
-    background: #ffdd57;
+    background: #f4fa4b;
     padding: 10px 20px;
     margin-top: 15px;
     display: inline-block;
