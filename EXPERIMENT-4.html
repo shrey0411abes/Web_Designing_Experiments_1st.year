@@ -1,0 +1,45 @@
+<html>
+    <head>
+    <title>Hotel Room Booking Form</title>
+    <style> form{
+            width: 28%;
+            margin: auto;
+            padding: 20px;
+            border: 4px solid #494646;
+            border-radius: 1px;
+            background-color: #f9f9f9;
+            height: 72%;
+    }
+        label {
+            font-weight: bold;
+        }</style>
+    </head>
+    <body>
+       
+        <form><h2 align="center">Hotel Room Booking Form</h2>
+            <label for="fullname">Full Name:<input type="text" id="fullname" name="fullname" required></label><br><br>
+
+            <label for="email">Email:<input type="email" id="email" name="email" required><br><br></label>
+            
+            <label for="phone">Phone Number:<input type="tel" id="phone" name="phone" required><br></label><br>
+            
+            <label for="checkin">Check-in Date:<input type="date" id="checkin" name="checkin" required><br></label><br>
+            
+            <label for="checkout">Check-out Date:<input type="date" id="checkout" name="checkout" required><br></label><br>
+
+            <label for="roomtype">Room Type: <select id="roomtype" name="roomtype" required>
+                <option value="single">Single Room</option>
+                <option value="double">Double Room</option>
+                <option value="triple">Triple Room</option>
+                <option value="deluxe">Deluxe Room</option></label><br>
+            </select><br><br>
+
+            <label for="guests">Number of Guests:<input type="number" id="guests" name="guests" min="1" max="3" required><br></label><br>
+            
+            <label for="requests">Special Requests:<textarea id="requests" name="requests" rows="4" cols="50"></textarea><br></label><br>
+            
+            <input type="submit" value="Book Now">
+            <input type="reset" value="Reset">
+    </body>
+</form>
+</html>

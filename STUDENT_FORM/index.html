@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<!-- Declares that this document uses HTML5 -->
+
+<html lang="en">
+<!-- Opens the HTML document and sets the language to English -->
+
+<head>
+  <meta charset="utf-8" />
+  <!-- Sets the character encoding to UTF-8 so all symbols work -->
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- Makes the webpage responsive on mobile devices -->
+
+  <title>Student Sign-up Form</title>
+  <!-- Title shown in browser tab -->
+
+  <!-- Linking external CSS file -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <!-- Body contains everything visible on the webpage -->
+
+  <main class="container">
+    <!-- Main section holds the form and centers the content -->
+    
+    <h1 class="title">Student Sign-up Form</h1>
+    <!-- Main heading of the page -->
+
+    <!-- Form starts -->
+    <!-- action="#" means the form will NOT go to any server -->
+    <!-- method="post" means it will send data in POST format if used with a server -->
+    <!-- novalidate disables browser auto-validation (you can remove it for teaching validation) -->
+    <form id="signupForm" class="form-card" action="#" method="post" novalidate>
+
+      <!-- ******* FULL NAME FIELD ******* -->
+      <div class="row">
+        <!-- Row wrapper for label + input -->
+
+        <label for="fullName">Full name</label>
+        <!-- 'for' connects label with input id so clicking the label focuses the input -->
+
+        <input
+          type="text"
+          id="fullName"
+          name="fullName"
+          placeholder="e.g. Shrey Kumar Gupta"
+          required
+          minlength="3"
+        />
+        <!--
+          type="text" → normal text input
+          id → connects to label
+          name → key used to send data to server
+          placeholder → hint text inside box
+          required → user must fill this field
+          minlength="3" → at least 3 characters
+        -->
+      </div>
+
+      <!-- ******* EMAIL FIELD ******* -->
+      <div class="row">
+        <label for="email">Email address</label>
+
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="example@mail.com"
+          required
+        />
+        <!--
+          type="email" forces email format (example@mail.com)
+          required → must be filled
+        -->
+      </div>
+
+      <!-- ******* AGE FIELD ******* -->
+      <div class="row">
+        <label for="age">Age</label>
+
+        <input
+          type="number"
+          id="age"
+          name="age"
+          min="6"
+          max="100"
+          placeholder="Your age"
+          required
+        />
+        <!--
+          type="number" → numeric input
+          min="6" → minimum allowed value
+          max="100" → maximum allowed value
+          required → must be filled
+        -->
+      </div>
+
+      <!-- ******* PASSWORD FIELD ******* -->
+      <div class="row">
+        <label for="password">Create password</label>
+
+        <input
+          type="password"
+          id="password"
+          name="password"
+          minlength="6"
+          placeholder="At least 6 characters with one capital letter and an alphanumeric character"
+          required
+        />
+        <!--
+          type="password" → hides characters
+          minlength → minimum length required
+        -->
+      </div>
+
+      <!-- ******* RADIO BUTTON (GENDER) ******* -->
+      <fieldset class="row">
+        <!-- Fieldset groups related inputs together -->
+        <legend>Gender</legend>
+        <!-- Legend is the title for the fieldset group -->
+
+        <label class="inline">
+          <input type="radio" name="gender" value="female" required /> Female
+        </label>
+        <!--
+          type="radio" → only one option can be selected
+          name="gender" → all radios with same name become a group
+          value="female" → actual value submitted
+        -->
+
+        <label class="inline">
+          <input type="radio" name="gender" value="male" /> Male
+        </label>
+
+        <label class="inline">
+          <input type="radio" name="gender" value="other" /> Other
+        </label>
+      </fieldset>
+
+      <!-- ******* CHECKBOX GROUP (INTERESTS) ******* -->
+      <fieldset class="row">
+        <legend>Interests (choose all that apply)</legend>
+
+        <label class="inline">
+          <input type="checkbox" name="interests" value="coding" /> Coding
+        </label>
+        <!--
+          type="checkbox" → multiple selections allowed
+          name="interests" → all interest values sent as a group
+        -->
+
+        <label class="inline">
+          <input type="checkbox" name="interests" value="drawing" /> Drawing
+        </label>
+
+        <label class="inline">
+          <input type="checkbox" name="interests" value="sports" /> Sports
+        </label>
+      </fieldset>
+
+      <!-- ******* SELECT DROPDOWN (GRADE) ******* -->
+      <div class="row">
+        <label for="grade">Class / Grade</label>
+
+        <select id="grade" name="grade" required>
+          <!-- Select creates a dropdown list -->
+          <option value="">Select grade</option>
+          <!-- Empty value (default option) -->
+
+          <option>Grade 1</option>
+          <option>Grade 2</option>
+          <option>Grade 3</option>
+          <option>Grade 4</option>
+          <option>Grade 5</option>
+        </select>
+      </div>
+
+      <!-- ******* TEXTAREA FIELD ******* -->
+      <div class="row">
+        <label for="about">Tell us (one line) about yourself</label>
+
+        <textarea
+          id="about"
+          name="about"
+          rows="3"
+          maxlength="200"
+          placeholder="I love science..."
+        ></textarea>
+        <!--
+          textarea → multi-line input box
+          rows → visible height
+          maxlength → maximum characters
+        -->
+      </div>
+
+      <!-- Helper note -->
+      <p class="helper">Fields marked with * are required.</p>
+
+      <!-- ******* BUTTONS ******* -->
+      <div class="actions">
+        <button type="submit" class="btn primary">Submit</button>
+        <!-- type="submit" → sends form -->
+
+        <button type="reset" class="btn">Reset</button>
+        <!-- type="reset" → clears all fields -->
+      </div>
+
+    </form>
+
+    <!-- Footer message -->
+    <footer class="footer">
+      Open this file in a browser to fill your details.</details>.
+    </footer>
+
+  </main>
+</body>
+</html>
