@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+
+    <!-- Linking External CSS File -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+    <header>
+        <nav class="navbar">
+            <h1 class="logo">MyPortfolio</h1>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- ================= HERO SECTION ================= -->
+    <section id="home" class="hero-section">
+        <div class="hero-text">
+            <h2>Hello, I'm <span class="name">Shrey Kumar Gupta</span></h2>
+            <h3>B.Tech First Year Student in CSE.</h3>
+            <p>Aspiring Web Developer | HTML • CSS • GitHub</p>
+            <a href="#projects" class="btn">View My Work</a>
+        </div>
+    </section>
+
+    <!-- ================= ABOUT SECTION ================= -->
+    <section id="about" class="about-section">
+        <h2 class="section-title">About Me</h2>
+
+        <div class="about-container">
+            <img src="PROFESSIONAL_PROFILE_PHOTO.JPG" alt="Profile Photo" class="profile-img">
+
+            <div class="about-text">
+                <p>
+                    I am a passionate web developer learning HTML, CSS and Git.  
+                    This is my demo portfolio project created for practice and learning purpose.
+                </p>
+                <p>
+                    I love building clean and responsive web designs using HTML and CSS only.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= SKILLS SECTION ================= -->
+    <section id="skills" class="skills-section">
+        <h2 class="section-title">My Skills</h2>
+
+        <ul class="skills-list">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>Git</li>
+            <li>GitHub</li>
+            <li>Responsive Design</li>
+        </ul>
+    </section>
+
+    <!-- ================= PROJECT SECTION ================= -->
+    <section id="projects" class="project-section">
+        <h2 class="section-title">My Projects</h2>
+
+        <div class="project-container">
+
+            <!-- Project Card 1 -->
+            <div class="project-card">
+                <img src="image2.jpg" alt="Project Image">
+                <h3>Project One</h3>
+                <p>A simple web page using HTML and CSS.</p>
+            </div>
+
+            <!-- Project Card 2 -->
+            <div class="project-card">
+                <img src="image1.jpg" alt="Project Image">
+                <h3>Project Two</h3>
+                <p>Responsive layout using Flexbox and media queries.</p>
+            </div>
+
+            <!-- Project Card 3 -->
+            <div class="project-card">
+                <img src="image2.jpg" alt="Project Image">
+                <h3>Project Three</h3>
+                <p>HTML forms and tables based website.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= CONTACT SECTION ================= -->
+    <section id="contact" class="contact-section">
+        <h2 class="section-title">Contact Me</h2>
+
+        <form class="contact-form">
+
+            <!-- Label + Input -->
+            <label>Your Name</label>
+            <input type="text" placeholder="Enter your name" required>
+
+            <label>Your Email</label>
+            <!-- Required attribute helps in validation -->
+            <input type="email" placeholder="Enter your email" required>
+
+            <label>Your Message</label>
+            <textarea rows="5" placeholder="Write your message..." required></textarea>
+
+            <!-- Submit Button -->
+            <button type="submit" class="btn">Send Message</button>
+        </form>
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+    <footer>
+        <p>© 2025 Shrey Kumar Gupta | All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

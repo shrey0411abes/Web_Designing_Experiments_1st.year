@@ -1,0 +1,166 @@
+/* ========== BASIC RESET ========== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Setting a clean font for the whole website */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* ========== NAVBAR STYLING ========== */
+header {
+    background-color: #111;
+    padding: 15px 0;
+}
+
+.navbar {
+    width: 90%;
+    margin: auto;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-links li {
+    list-style: none;
+    display: inline-block;
+    margin-left: 20px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.nav-links a:hover {
+    color: #ffdd57;
+}
+
+/* ========== HERO SECTION ========== */
+.hero-section {
+    height: 90vh;
+    background: url("https://via.placeholder.com/1400x700") center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+.hero-text h2 {
+    font-size: 40px;
+}
+.hero-section h3 {
+    font-size: 28px;
+    margin: 10px 0;
+    color: lightgreen;
+}
+.hero-section p{
+    font-size: 24px;
+    margin: 15px 0;
+    color: cyan;
+}
+
+
+.name {
+    color: #ffdd57;
+}
+
+.btn {
+    background: #ffdd57;
+    padding: 10px 20px;
+    margin-top: 15px;
+    display: inline-block;
+    color: black;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+/* ========== SECTION TITLES ========== */
+.section-title {
+    text-align: center;
+    font-size: 32px;
+    margin: 40px 0 20px;
+}
+
+/* ========== ABOUT SECTION ========== */
+.about-section {
+    width: 90%;
+    margin: auto;
+}
+
+.about-container {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.profile-img {
+    width: 250px;
+    border-radius: 10px;
+}
+
+/* ========== SKILLS SECTION ========== */
+.skills-list {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    gap: 20px;
+    font-size: 20px;
+}
+
+/* ========== PROJECT SECTION ========== */
+.project-container {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.project-card {
+    width: 300px;
+    background: #f4f4f4;
+    padding: 15px;
+    margin: 15px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.project-card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* ========== CONTACT FORM ========== */
+.contact-form {
+    width: 50%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 10px;
+    margin-top: 10px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+}
+
+/* ========== FOOTER ========== */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #111;
+    color: white;
+    margin-top: 40px;
+} 
