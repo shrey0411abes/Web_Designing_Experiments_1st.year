@@ -258,7 +258,7 @@
 @media (max-width: 900px) {
     .sidebar { width: 35%; }
     .chat-area { width: 65%; }
-}
+}  
 
 @media (max-width: 600px) {
     .app {
