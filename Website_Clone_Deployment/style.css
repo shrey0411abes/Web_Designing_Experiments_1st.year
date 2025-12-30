@@ -10,7 +10,8 @@
 /* ===== DARK MODE ===== */
 #dark:checked ~ .app {
     filter: invert(1) hue-rotate(180deg);
-}
+} 
+
 
 /* ===== APP CONTAINER ===== */
 .app {
