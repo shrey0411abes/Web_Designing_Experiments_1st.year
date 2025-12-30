@@ -8,8 +8,8 @@
 }
 
 body {
-    background: #f5f5f5;
-    color: #333;
+    background: #1b1d04;
+    color: #92fe75;
 }
 
 /* Navbar */
@@ -24,7 +24,7 @@ body {
 .logo {
     font-size: 34px;
     font-weight: bold;
-    color: #f6f4f4;
+    color: #f53b3b;
 }
 
 .nav-links {
@@ -38,7 +38,7 @@ body {
 
 .nav-links a {
     text-decoration: none;
-    color: #f6f4f4;
+    color: #fbf849;
     font-weight: 500;
 }
 
@@ -62,7 +62,7 @@ body {
     display: inline-block;
     padding: 10px 20px;
     background: #007bff;
-    color: white;
+    color: rgb(245, 244, 244);
     text-decoration: none;
     border-radius: 5px;
     margin-top: 15px;
@@ -100,7 +100,7 @@ body {
 
 .skill-list li {
     list-style: none;
-    background: white;
+    background: rgb(241, 15, 34);
     padding: 12px 20px;
     border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
@@ -118,7 +118,7 @@ body {
 }
 
 .project-card {
-    background: white;
+    background: rgb(240, 8, 175);
     padding: 20px;
     width: 280px;
     border-radius: 10px;
