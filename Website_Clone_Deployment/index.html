@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WhatsApp Clone</title>
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#ece5dd;
+}
+
+/* APP CONTAINER */
+.app{
+    max-width:420px;
+    margin:auto;
+    background:#fff;
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+}
+
+/* HEADER */
+.header{
+    background:#075e54;
+    color:white;
+    padding:12px 15px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.header h2{
+    font-size:20px;
+}
+
+.header-icons i{
+    margin-left:15px;
+    cursor:pointer;
+}
+
+/* TABS */
+.tabs{
+    display:flex;
+    background:#075e54;
+    color:#cfeae6;
+}
+
+.tab{
+    flex:1;
+    text-align:center;
+    padding:10px;
+    font-size:14px;
+    cursor:pointer;
+}
+
+.tab.active{
+    color:white;
+    border-bottom:3px solid white;
+}
+
+/* CHAT LIST */
+.chat-list{
+    flex:1;
+    overflow-y:auto;
+}
+
+.chat{
+    display:flex;
+    padding:12px 15px;
+    border-bottom:1px solid #f0f0f0;
+    cursor:pointer;
+    transition:0.2s;
+}
+
+.chat:hover{
+    background:#f5f5f5;
+}
+
+.chat img{
+    width:45px;
+    height:45px;
+    border-radius:50%;
+    margin-right:12px;
+}
+
+.chat-info{
+    flex:1;
+}
+
+.chat-info h4{
+    font-size:16px;
+    margin-bottom:4px;
+}
+
+.chat-info p{
+    font-size:14px;
+    color:#666;
+}
+
+.chat-time{
+    font-size:12px;
+    color:#888;
+}
+
+/* FLOAT BUTTON */
+.fab{
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    background:#25d366;
+    color:white;
+    width:55px;
+    height:55px;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:22px;
+    cursor:pointer;
+    box-shadow:0 4px 10px rgba(0,0,0,0.3);
+}
+
+/* RESPONSIVE FOR DESKTOP */
+@media(min-width:768px){
+    body{
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        background:#d1d7db;
+    }
+
+    .app{
+        height:90vh;
+        box-shadow:0 0 20px rgba(0,0,0,0.2);
+        border-radius:10px;
+        overflow:hidden;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="app">
+
+    <!-- HEADER -->
+    <div class="header">
+        <h2>WhatsApp</h2>
+        <div class="header-icons">
+            <i class="fa-solid fa-camera"></i>
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <i class="fa-solid fa-ellipsis-vertical"></i>
+        </div>
+    </div>
+
+    <!-- TABS -->
+    <div class="tabs">
+        <div class="tab"><i class="fa-solid fa-users"></i></div>
+        <div class="tab active">Chats</div>
+        <div class="tab">Status</div>
+        <div class="tab">Calls</div>
+    </div>
+
+    <!-- CHAT LIST -->
+    <div class="chat-list">
+
+        <div class="chat">
+            <img src="https://via.placeholder.com/45">
+            <div class="chat-info">
+                <h4>Rohan</h4>
+                <p>Hey! How are you?</p>
+            </div>
+            <div class="chat-time">10:45 AM</div>
+        </div>
+
+        <div class="chat">
+            <img src="https://via.placeholder.com/45">
+            <div class="chat-info">
+                <h4>Anjali</h4>
+                <p>Meeting at 5 pm</p>
+            </div>
+            <div class="chat-time">9:30 AM</div>
+        </div>
+
+        <div class="chat">
+            <img src="https://via.placeholder.com/45">
+            <div class="chat-info">
+                <h4>Aman</h4>
+                <p>Project done ✔</p>
+            </div>
+            <div class="chat-time">Yesterday</div>
+        </div>
+
+        <div class="chat">
+            <img src="https://via.placeholder.com/45">
+            <div class="chat-info">
+                <h4>Family Group</h4>
+                <p>Mom: Dinner ready</p>
+            </div>
+            <div class="chat-time">Yesterday</div>
+        </div>
+
+    </div>
+
+</div>
+
+<!-- FLOAT BUTTON -->
+<div class="fab">
+    <i class="fa-solid fa-message"></i>
+</div>
+
+</body>
+</html> 
