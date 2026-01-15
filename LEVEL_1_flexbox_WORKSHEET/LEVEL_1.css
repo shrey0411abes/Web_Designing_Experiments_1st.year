@@ -1,13 +1,13 @@
 .container {
     display: flex;
-    background-color: lightgray;
+    background-color: rgb(92, 238, 249);
 }
 
 .box {
     width: 60px;
     height: 60px;
-    background-color: tomato;
-    color: white;
+    background-color: rgb(245, 142, 7);
+    color: rgb(178, 224, 10);
     text-align: center;
     line-height: 60px;
     margin: 5px;
