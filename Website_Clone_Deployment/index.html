@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>WhatsApp Clone</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body class="bg">
+    <style>
+      * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+/* ===== BACKGROUND ===== */
+.bg {
+    background: linear-gradient(135deg, #00a884 0%, #128c7e 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* ===== DARK MODE ===== */
+#dark:checked ~ .app {
+    filter: invert(1) hue-rotate(180deg);
+}
+
+/* ===== APP CONTAINER ===== */
+.app {
+    width: 95%;
+    max-width: 1400px;
+    height: 90vh;
+    background: #ffffff;
+    display: flex;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+}
+
+/* ===== SIDEBAR ===== */
+.sidebar {
+    width: 30%;
+    background: #f0f2f5;
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid #d1d7db;
+}
+
+/* HEADER */
+.sidebar-header {
+    padding: 12px;
+    background: #f0f2f5;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.avatar {
+    width: 42px;
+    border-radius: 50%;
+}
+
+.icons i {
+    margin-left: 18px;
+    font-size: 18px;
+    color: #54656f;
+    cursor: pointer;
+}
+
+/* ===== NAV TABS ===== */
+.tabs {
+    display: flex;
+    background: #ffffff;
+    border-bottom: 1px solid #d1d7db;
+}
+
+.tabs a {
+    flex: 1;
+    text-align: center;
+    padding: 12px 0;
+    font-size: 13px;
+    color: #54656f;
+    cursor: pointer;
+}
+
+.tabs a i {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 4px;
+}
+
+.tabs a.active {
+    color: #00a884;
+    border-bottom: 3px solid #00a884;
+    font-weight: 600;
+}
+
+/* ===== SEARCH ===== */
+.search {
+    display: flex;
+    align-items: center;
+    padding: 8px 10px;
+    background: #ffffff;
+}
+
+.search i {
+    color: #8696a0;
+}
+
+.search input {
+    margin-left: 10px;
+    border: none;
+    outline: none;
+    width: 100%;
+    font-size: 14px;
+}
+
+/* ===== CHAT LIST ===== */
+.chat-list {
+    flex: 1;
+    overflow-y: auto;
+}
+
+.chat {
+    display: flex;
+    align-items: center;
+    padding: 12px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.chat:hover,
+.chat.active {
+    background: #e9edef;
+}
+
+.chat img {
+    width: 48px;
+    border-radius: 50%;
+}
+
+.chat div {
+    margin-left: 12px;
+    flex: 1;
+}
+
+.chat h4 {
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.chat p {
+    font-size: 13px;
+    color: #667781;
+}
+
+.chat span {
+    font-size: 11px;
+    color: #8696a0;
+}
+
+/* ===== CHAT AREA ===== */
+.chat-area {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(
+        to bottom,
+        #efeae2,
+        #e5ddd5
+    );
+}
+
+/* HEADER */
+.chat-header {
+    padding: 12px;
+    background: #f0f2f5;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #d1d7db;
+}
+
+.chat-header img {
+    width: 42px;
+    border-radius: 50%;
+}
+
+.chat-header .left {
+    display: flex;
+    align-items: center;
+}
+
+.chat-header .left div {
+    margin-left: 10px;
+}
+
+.chat-header h4 {
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.chat-header p {
+    font-size: 12px;
+    color: #667781;
+}
+
+.chat-header i {
+    margin-left: 18px;
+    font-size: 18px;
+    color: #54656f;
+    cursor: pointer;
+}
+
+/* ===== MESSAGES ===== */
+.messages {
+    flex: 1;
+    padding: 24px;
+    overflow-y: auto;
+}
+
+.msg {
+    max-width: 65%;
+    padding: 10px 14px;
+    margin-bottom: 12px;
+    font-size: 14px;
+    line-height: 1.4;
+    border-radius: 10px;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+}
+
+.sent {
+    background: #d9fdd3;
+    margin-left: auto;
+    border-top-right-radius: 0;
+}
+
+.received {
+    background: #ffffff;
+    border-top-left-radius: 0;
+}
+
+/* ===== INPUT ===== */
+.input {
+    padding: 10px;
+    background: #f0f2f5;
+    display: flex;
+    align-items: center;
+}
+
+.input i {
+    font-size: 20px;
+    color: #54656f;
+    cursor: pointer;
+}
+
+.input input {
+    flex: 1;
+    margin: 0 10px;
+    padding: 10px 14px;
+    border-radius: 25px;
+    border: none;
+    outline: none;
+    font-size: 14px;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 900px) {
+    .sidebar { width: 35%; }
+    .chat-area { width: 65%; }
+}
+
+@media (max-width: 600px) {
+    .app {
+        height: 100vh;
+        border-radius: 0;
+    }
+    .sidebar {
+        width: 100%;
+    }
+    .chat-area {
+        display: none;
+    }
+}
+/* ===== GLASSMORPHISM EFFECT ===== */
+.sidebar,
+.chat-header,
+.input,
+.sidebar-header,
+.tabs {
+    background: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+}
+
+.chat-area {
+    background: linear-gradient(
+        to bottom,
+        rgba(239,234,226,0.95),
+        rgba(229,221,213,0.95)
+    );
+}
+
+/* Soft borders */
+.sidebar,
+.chat-header,
+.input {
+    border-color: rgba(0,0,0,0.08);
+}
+/* ===== MOBILE BOTTOM NAV ===== */
+.mobile-nav {
+    display: none;
+}
+
+@media (max-width: 600px) {
+    .tabs {
+        display: none;
+    }
+
+    .mobile-nav {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 60px;
+        background: rgba(255,255,255,0.9);
+        backdrop-filter: blur(10px);
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        border-top: 1px solid rgba(0,0,0,0.1);
+        z-index: 100;
+    }
+
+    .mobile-nav a {
+        text-align: center;
+        font-size: 12px;
+        color: #54656f;
+    }
+
+    .mobile-nav i {
+        display: block;
+        font-size: 18px;
+        margin-bottom: 3px;
+    }
+
+    .mobile-nav a.active {
+        color: #00a884;
+        font-weight: 600;
+    }
+
+    .chat-list {
+        padding-bottom: 70px;
+    }
+
+}
+/* ===== BRAND HEADER ===== */
+.brand-header {
+    justify-content: space-between;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+}
+
+.wa-logo {
+    width: 26px;
+    margin-right: 8px;
+}
+
+.brand-name {
+    font-size: 18px;
+    font-weight: 600;
+    color: #00a884;
+    letter-spacing: 0.3px;
+}
+    </style>
+
+<input type="checkbox" id="dark">
+
+<div class="app">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+        <!-- HEADER -->
+         <header class="sidebar-header brand-header">
+
+    <div class="brand">
+        <a href="profile.html">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
+                 class="wa-logo"
+                 alt="WhatsApp">
+        </a>
+        <span class="brand-name">WhatsApp</span>
+    </div>
+
+    <div class="icons">
+        <i class="fa-solid fa-circle-notch"></i>
+        <i class="fa-solid fa-message"></i>
+        <a href="settings.html" class="icon-link">
+            <i class="fa-solid fa-ellipsis-vertical"></i>
+        </a>
+    </div>
+
+</header>
+
+        <!-- NAV -->
+        <nav class="tabs">
+            <a class="active"><i class="fa-solid fa-comments"></i>Chats</a>
+            <a><i class="fa-solid fa-circle-notch"></i>Status</a>
+            <a><i class="fa-solid fa-phone"></i>Calls</a>
+        </nav>
+
+        <!-- SEARCH -->
+        <div class="search">
+            <i class="fa fa-search"></i>
+            <input type="text" placeholder="Search or start new chat">
+        </div>
+
+        <!-- CHAT LIST -->
+        <div class="chat-list">
+            <div class="chat active">
+                <img src="https://i.pravatar.cc/100?img=11">
+                <div>
+                    <h4>Dr. Omshankar Gupta</h4>
+                    <p>Send reports</p>
+                </div>
+                <span>10:30</span> 
+            </div>
+
+            <div class="chat">
+                <img src="https://i.pravatar.cc/100?img=12">
+                <div>
+                    <h4>Rahul</h4>
+                    <p>Okay 👍</p>
+                </div>
+                <span>Yesterday</span>
+            </div>
+
+            <div class="chat">
+                <img src="https://i.pravatar.cc/100?img=13">
+                <div>
+                    <h4>College Group</h4>
+                    <p>Assignment uploaded</p>
+                </div>
+                <span>Mon</span>
+            </div>
+        </div>
+
+    </aside>
+
+    <!-- CHAT AREA -->
+    <main class="chat-area">
+
+        <header class="chat-header">
+            <div class="left">
+                <img src="https://i.pravatar.cc/100?img=11">
+                <div>
+                    <h4>Dr. Omshankar Gupta  </h4>
+                    <p>online</p>
+                </div>
+            </div>
+            <div class="right">
+                <i class="fa-solid fa-video"></i>
+                <i class="fa-solid fa-phone"></i>
+                <i class="fa-solid fa-ellipsis-vertical"></i>
+            </div>
+        </header>
+
+        <!-- MESSAGES -->
+        <section class="messages">
+            <div class="msg received">Hello!</div>
+            <div class="msg sent">Hi doctor 😊</div>
+            <div class="msg received">Please send reports.</div>
+            <div class="msg sent">Sure.</div>
+        </section>
+
+        <!-- INPUT -->
+        <footer class="input">
+            <i class="fa-regular fa-face-smile"></i>
+            <input type="text" placeholder="Type a message">
+            <i class="fa-solid fa-microphone"></i>
+        </footer>
+
+    </main>
+
+</div>
+
+<!-- MOBILE BOTTOM NAV -->
+<div class="mobile-nav">
+    <a class="active">
+        <i class="fa-solid fa-comments"></i>
+        <span>Chats</span>
+    </a>
+    <a>
+        <i class="fa-solid fa-circle-notch"></i>
+        <span>Status</span>
+    </a>
+    <a>
+        <i class="fa-solid fa-phone"></i>
+        <span>Calls</span>
+    </a>
+</div>
+
+</body>
+</html>
