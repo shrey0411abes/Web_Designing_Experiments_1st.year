@@ -1,0 +1,49 @@
+<!-- METHOD-2nd --> 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Student Result</title>
+</head>
+<body>
+<h2>Student Result Program</h2>
+<label for="sub">Enter Number of Subjects:</label>
+<input type="number" id="sub" title="Number of subjects" placeholder="Enter number of subjects">
+<button onclick="result()">Calculate</button>
+<p id="output"></p>
+<script>
+function result(){
+var subjects = document.getElementById("sub").value;
+var total = 0;
+for(var i=1; i<=subjects; i++)
+{
+ var marks = prompt("Enter marks of subject " + i);
+ total = total + Number(marks);
+}
+var average = total / subjects;
+var grade;
+if(average >= 60)
+{
+ grade = "A";
+}
+else if(average >= 50)
+{
+ grade = "B";
+}
+else if(average >= 40)
+{
+ grade = "C";
+}
+else
+{
+ grade = "Fail";
+}
+document.getElementById("output").innerHTML =
+"Total Marks = " + total + "<br>" +
+"Average Marks = " + average + "<br>" +
+"Grade = " + grade;
+}
+</script>
+</body>
+</html>

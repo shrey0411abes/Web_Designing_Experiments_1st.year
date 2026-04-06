@@ -1,0 +1,18 @@
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items:center;
+    height: 200px;
+    background-color: lightgray;
+}
+
+.box {
+    width: 60px;
+    height: 60px;
+    background-color: tomato;
+    color: white;
+    text-align: center;
+    line-height: 60px;
+    margin: 5px;
+}

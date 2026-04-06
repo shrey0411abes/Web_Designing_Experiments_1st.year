@@ -1,0 +1,55 @@
+ body {
+    font-family: Arial, sans-serif;
+    background: #f5f5f5;
+    padding: 40px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/* Base style for all boxes */
+.box {
+    width: 150px;
+    height: 150px;
+    background: #ff6b81;
+    margin: 25px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 18px;
+    border-radius: 10px;
+    /* transition: transform 0.5s ease; Smooth animation */
+}
+
+/* 1. Translate Example */
+.translate:hover {
+    /* Move 80px right and 30px down */
+    transform: translate(80px, 30px);
+}
+
+/* 2. Rotate Example */
+.rotate:hover {
+    /* Rotate clockwise 45 degrees */
+    transform: rotate(45deg);
+}
+
+/* 3. Scale Example */
+.scale:hover {
+    /* Increase size to 150% */
+    transform: scale(1.5);
+}
+
+/* 4. Skew Example */
+.skew:hover {
+    /* Tilt by 20° horizontally */
+    transform: skew(20deg);
+}
+
+/* 5. Multiple transform combo */
+.combo:hover {
+    /* Move, rotate and scale together */
+    transform: translateY(-20px) scale(1.2) rotate(10deg);
+}
