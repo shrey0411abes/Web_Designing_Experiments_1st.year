@@ -17,7 +17,7 @@ document.getElementById("hide").addEventListener("click", function() {
 // Show paragraph
 document.getElementById("show").addEventListener("click", function() {
     document.getElementById("para").style.display = "block";
-});
+});    
 
 // Mouseover event
 document.getElementById("box").addEventListener("mouseover", function() {
