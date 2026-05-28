@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Dashboard OS</title>
+</head>
+<body>
+      <ul>
+          <li>📚 Subjects</li>
+          <li>📅 Timetable</li>
+          <li>📊 Attendance</li>
+          <li>🎯 Goals</li>
+        </ul>
+      </div>
+
+      <button id="themeBtn">🌙 Toggle Theme</button>
+    </aside>
+
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+
+      <!-- TOP SECTION -->
+      <section class="top-section glass">
+        <div>
+          <h2 id="greeting">Welcome Back 👋</h2>
+          <p>Stay productive and organized today.</p>
+        </div>
+
+        <div class="clock-box">
+          <h1 id="clock">00:00:00</h1>
+          <p id="date"></p>
+        </div>
+      </section>
+
+
+      <!-- CARDS -->
+      <section class="cards-grid">
+
+        <!-- TODO -->
+        <div class="card glass">
+          <h3>📌 Daily Tasks</h3>
+
+          <div class="task-input">
+            <input type="text" id="taskInput" placeholder="Enter a task..." />
+            <button onclick="addTask()">Add</button>
+          </div>
+
+          <ul id="taskList"></ul>
+        </div>
+
+
+        <!-- NOTES -->
+        <div class="card glass">
+          <h3>📝 Quick Notes</h3>
+
+          <textarea id="notes" placeholder="Write your notes here..."></textarea>
+
+          <button class="save-btn" onclick="saveNotes()">
+            Save Notes
+          </button>
+        </div>
+
+
+        <!-- ATTENDANCE -->
+        <div class="card glass">
+          <h3>📊 Attendance Calculator</h3>
+
+          <input type="number" id="totalClasses" placeholder="Total Classes" />
+
+          <input type="number" id="attendedClasses" placeholder="Attended Classes" />
+
+          <button class="calculate-btn" onclick="calculateAttendance()">
+            Calculate
+          </button>
+
+          <h2 id="attendanceResult">0%</h2>
+        </div>
+
+
+        <!-- MOTIVATION -->
+        <div class="card glass motivation-card">
+          <h3>⚡ Motivation</h3>
+
+          <p id="quote">
+            "Success is built through discipline and consistency."
+          </p>
+
+          <button onclick="newQuote()">New Quote</button>
+        </div>
+
+      </section>
+
+    </main>
+  </div>
+
+
+  <script src="script.js"></script>
+</body>
+</html>
