@@ -1,83 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Student Productivity Dashboard</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>StudentDashboardOS</title>
 
-  <link rel="stylesheet" href="style.css" />
+    <!-- CSS FILE -->
+    <link rel="stylesheet" href="style.css" />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-</head>
-<body>
+    <!-- GOOGLE FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  </head>
 
-  <div class="container">
+  <body>
+    <div class="container">
 
-    <!-- SIDEBAR -->
-    <aside class="sidebar">
-      <div>
-        <h1 class="logo">StudySync</h1>
-
-        <ul class="menu">
-          <li>🏠 Dashboard</li>
-          <li>📝 Notes</li>
-          <li>📚 Subjects</li>
-          <li>📅 Timetable</li>
-          <li>📊 Attendance</li>
-          <li>🎯 Goals</li>
-        </ul>
-      </div>
-
-      <button id="themeBtn">🌙 Toggle Theme</button>
-    </aside>
-
-
-    <!-- MAIN CONTENT -->
-    <main class="main-content">
-
-      <!-- TOP SECTION -->
-      <section class="top-section glass">
+      <!-- SIDEBAR -->
+      <aside class="sidebar">
         <div>
-          <h2 id="greeting">Welcome Back 👋</h2>
-          <p>Stay productive and organized today.</p>
+          <h1 class="logo">StudentDashboardOS</h1>
+          <ul class="menu">
+            <li>🏠 Dashboard</li>
+            <li>📝 Notes</li>
+            <li>📚 Subjects</li>
+            <li>📅 Timetable</li>
+            <li>📊 Attendance</li>
+            <li>🎯 Goals</li>
+          </ul>
         </div>
+        <button id="themeBtn">🌙 Dark Mode</button>
+      </aside>
 
-        <div class="clock-box">
-          <h1 id="clock">00:00:00</h1>
-          <p id="date"></p>
-        </div>
-      </section>
+      <!-- MAIN CONTENT -->
+      <main class="main-content">
 
-
-      <!-- CARDS -->
-      <section class="cards-grid">
-
-        <!-- TODO -->
-        <div class="card glass">
-          <h3>📌 Daily Tasks</h3>
-
-          <div class="task-input">
-            <input type="text" id="taskInput" placeholder="Enter a task..." />
-            <button onclick="addTask()">Add</button>
+        <!-- TOP SECTION -->
+        <section class="top-section glass">
+          <div>
+            <h2 id="greeting">Welcome Back 👋</h2>
+            <p>Stay productive and organized today.</p>
           </div>
 
-          <ul id="taskList"></ul>
-        </div>
+          <!-- CLOCK -->
+          <div class="clock-box">
+            <h1 id="clock">00:00:00</h1>
+            <p id="date"></p>
+          </div>
+        </section>
 
+        <!-- PRODUCTIVITY BAR -->
+        <section class="progress-section glass">
+          <h3>🚀 Daily Productivity</h3>
+          <div class="progress-bar">
+            <div class="progress-fill"></div>
+          </div>
+        </section>
 
-        <!-- NOTES -->
-        <div class="card glass">
-          <h3>📝 Quick Notes</h3>
+        <!-- DASHBOARD CARDS -->
+        <section class="cards-grid">
 
-          <textarea id="notes" placeholder="Write your notes here..."></textarea>
+          <!-- TODO CARD -->
+          <div class="card glass">
+            <h3>📌 Daily Tasks</h3>
+            <div class="task-input">
+              <input type="text" id="taskInput" placeholder="Enter a task..." />
+              <button onclick="addTask()">Add</button>
+            </div>
+            <ul id="taskList"></ul>
+          </div>
 
-          <button class="save-btn" onclick="saveNotes()">
-            Save Notes
-          </button>
-        </div>
+          <!-- NOTES CARD -->
+          <div class="card glass">
+            <h3>📝 Quick Notes</h3>
+            <textarea id="notes" placeholder="Write your notes here..."></textarea>
+            <button class="save-btn" onclick="saveNotes()">Save Notes</button>
+          </div>
 
+          <!-- ATTENDANCE CARD -->
+          <div class="card glass">
+            <h3>📊 Attendance Calculator</h3>
+            <input type="number" id="totalClasses" placeholder="Total Classes" />
+            <input type="number" id="attendedClasses" placeholder="Attended Classes" />
+            <button class="calculate-btn" onclick="calculateAttendance()">Calculate</button>
+            <h2 id="attendanceResult">0%</h2>
+          </div>
 
-        <!-- ATTENDANCE -->
+          <!-- MOTIVATION CARD -->
+          <div class="card glass motivation-card">
+            <h3>⚡ Motivation</h3>
+            <p id="quote">"Success is built through discipline and consistency."</p>
+            <button onclick="newQuote()">New Quote</button>
+          </div>
+
+        </section>
+      </main>
+    </div>
+
+    <!-- JAVASCRIPT FILE -->
+    <script src="script.js"></script>
+  </body>
 </html>
+              <p id="date"></p>
