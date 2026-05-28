@@ -1,12 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Student Dashboard OS</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Student Productivity Dashboard</title>
+
+  <link rel="stylesheet" href="style.css" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-      <ul>
+
+  <div class="container">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <div>
+        <h1 class="logo">StudySync</h1>
+
+        <ul class="menu">
+          <li>🏠 Dashboard</li>
+          <li>📝 Notes</li>
           <li>📚 Subjects</li>
           <li>📅 Timetable</li>
           <li>📊 Attendance</li>
@@ -64,38 +80,4 @@
 
 
         <!-- ATTENDANCE -->
-        <div class="card glass">
-          <h3>📊 Attendance Calculator</h3>
-
-          <input type="number" id="totalClasses" placeholder="Total Classes" />
-
-          <input type="number" id="attendedClasses" placeholder="Attended Classes" />
-
-          <button class="calculate-btn" onclick="calculateAttendance()">
-            Calculate
-          </button>
-
-          <h2 id="attendanceResult">0%</h2>
-        </div>
-
-
-        <!-- MOTIVATION -->
-        <div class="card glass motivation-card">
-          <h3>⚡ Motivation</h3>
-
-          <p id="quote">
-            "Success is built through discipline and consistency."
-          </p>
-
-          <button onclick="newQuote()">New Quote</button>
-        </div>
-
-      </section>
-
-    </main>
-  </div>
-
-
-  <script src="script.js"></script>
-</body>
 </html>
