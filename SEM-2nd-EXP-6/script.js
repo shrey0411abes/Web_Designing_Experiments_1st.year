@@ -34,4 +34,4 @@ paragraph.style.fontSize = "16px";
 document.body.style.backgroundColor = "#f4f4f4";
 input.value = "";
 fontSize = 16;
-});
+});  
