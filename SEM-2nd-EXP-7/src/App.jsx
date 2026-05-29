@@ -6,20 +6,20 @@ function App() {
       <h1>Student Information</h1>
 
       <Student
-        name="Rahul Sharma"
-        course="Computer Science"
+        name="Shrey Kumar Gupta"
+        course="Computer Science & Engineering"
         marks="85"
       />
 
       <Student
-        name="Anita Verma"
+        name="Ram Nath Singh"
         course="Information Technology"
         marks="92"
       />
 
       <Student
-        name="Rohan Gupta"
-        course="Electronics"
+        name="Gopal Das"
+        course="Electronics Engineering"
         marks="78"
       />
     </div>
