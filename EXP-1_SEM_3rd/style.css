@@ -1,0 +1,90 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #fff;
+    margin: 20px;
+}
+
+h2 {
+    color: brown;
+    margin-bottom: 15px;
+}
+
+/* Makes table responsive */
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+}
+
+table {
+    margin: auto;
+    border-collapse: collapse;
+    width: 60%;
+    min-width: 600px;
+}
+
+table,
+th,
+td {
+    border: 2px solid brown;
+}
+
+th,
+td {
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    background-color: #f8d7da;
+}
+
+/* Checkbox Styling */
+input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+}
+
+button {
+    padding: 8px 18px;
+    margin: 5px;
+    background-color: #8bc34a;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #689f38;
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+    table {
+        width: 90%;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+    table {
+        width: 100%;
+        font-size: 14px;
+    }
+
+    th,
+    td {
+        padding: 8px;
+    }
+
+    button {
+        width: 100%;
+        margin: 8px 0;
+    }
+}
