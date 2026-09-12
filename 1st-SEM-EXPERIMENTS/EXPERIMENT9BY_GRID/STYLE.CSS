@@ -1,0 +1,31 @@
+.root{
+    font-size: 16px;
+    background: red;
+}
+.box{
+    font-size: 3rem;
+    padding: 0.5rem;
+    background: rgb(90, 241, 8);
+}
+.box-rem{
+    font-size: 2rem; 
+    padding: 1rem; 
+    background: rgb(15, 95, 208);
+}
+.box-vhvw{
+    width: 50vw;
+    height: 50vh;
+    background: yellow;
+}
+.parent{
+    width:600px;
+    background: lightgray;
+    padding:50px;
+    font-size: larger;
+}
+.child{
+    width: 50%;
+    height: 80px;
+    font-size:150%;
+    background: orange;
+}
